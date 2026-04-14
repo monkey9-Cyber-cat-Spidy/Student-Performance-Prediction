@@ -1,47 +1,49 @@
 <div class="aih-hero">
-    <h1>Nexus ML</h1>
-    <p>A High-Performance Academic Success Prediction Engine. Quantify potential, visualize trajectories, and engineer your future with precision AI.</p>
-    <div class="aih-buttons">
-        <a href="runbook/" class="aih-btn aih-btn-primary">Get Started</a>
-        <a href="https://github.com/monkey9-Cyber-cat-Spidy/Student-Performance-Prediction" class="aih-btn aih-btn-secondary">View on GitHub</a>
+    <div class="aih-hero-content">
+        <h1>Nexus ML</h1>
+        <p>The high-performance intelligence engine for academic success. Predict trajectories, quantify effort, and engineer student outcomes with precision AI.</p>
+        <div class="aih-buttons">
+            <a href="runbook/" class="aih-btn aih-btn-primary">Explore Platform</a>
+            <a href="https://github.com/monkey9-Cyber-cat-Spidy/Student-Performance-Prediction" class="aih-btn aih-btn-secondary">View Source</a>
+        </div>
     </div>
 </div>
 
-## Project Capabilities
+## Performance Capabilities
 
 <div class="aih-grid">
 
 <div class="aih-card">
-    <span class="aih-card-icon">🧠</span>
-    <h3>Predictive Intelligence</h3>
-    <p>Leverage Random Forest ensembles trained on the UCI Student Dataset to forecast academic performance scores based on multi-dimensional feature sets.</p>
+    <div class="aih-card-icon">🎯</div>
+    <h3>Predictive Accuracy</h3>
+    <p>Utilize optimized Random Forest Regressors to forecast final academic scores with high-dimensional feature sensitivity.</p>
 </div>
 
 <div class="aih-card">
-    <span class="aih-card-icon">⚖️</span>
-    <h3>"What-If" Analysis</h3>
-    <p>Instantly calculate the "Score Delta" for hypothetical improvements in attendance, study habits, or scholarship status. Quantify the ROI of effort.</p>
+    <div class="aih-card-icon">⚡</div>
+    <h3>Counterfactual Analysis</h3>
+    <p>Mathematically simulate behavioral changes. Quantify how specific lifestyle adjustments impact academic success trajectories.</p>
 </div>
 
 <div class="aih-card">
-    <span class="aih-card-icon">📊</span>
-    <h3>Glass-Box Metrics</h3>
-    <p>Full transparency into model decision-making. View feature importance rankings and residual benchmarks (R2, MAE, RMSE) in real-time.</p>
+    <div class="aih-card-icon">🔓</div>
+    <h3>Glass-Box Transparency</h3>
+    <p>No hidden variables. Access full feature importance rankings and residual benchmarks directly through the dashboard.</p>
 </div>
 
 </div>
 
 ---
 
-## Technical Stack
+## Technical Infrastructure
 
-The ecosystem is built for speed and mathematical accuracy:
+Designed for low-latency inference and scalable student data analysis:
 
-- **Frontend**: High-fidelity dashboard built with **React** and **Vite**.
-- **Inference Layer**: Modern **FastAPI** backend for sub-100ms prediction latency.
-- **ML Pipeline**: **Scikit-Learn** powered training and feature engineering.
+- **UI Orchestration**: Real-time interactive dashboard powered by **React** and **Vite**.
+- **Inference Pipeline**: Distributed **FastAPI** backend designed for rapid model execution.
+- **Data Engineering**: Robust feature scaling and one-hot encoding optimized for **Scikit-Learn**.
 
 ---
 
-> [!TIP]
-> **Proactive Intervention**: Use the trajectory engine to identify academic risks at the start of the semester, allowing for early academic intervention.
+> [!IMPORTANT]
+> **Data Privacy**: All student metrics are handled with strict local serialization. Nexus ML is built for localized institution deployments to ensure data sovereignty.
