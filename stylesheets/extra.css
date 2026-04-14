@@ -1,0 +1,182 @@
+:root {
+    --aih-primary-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+    --aih-grid-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-md-color-scheme="slate"] {
+    --aih-grid-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Professional Sidebar */
+.md-sidebar--primary {
+    background-color: transparent !important;
+}
+
+.md-nav__link {
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    transition: color 0.2s ease;
+}
+
+/* Glassmorphic Header */
+.md-header {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid var(--aih-grid-color) !important;
+    color: #1e293b !important;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+    background-color: rgba(15, 23, 42, 0.7) !important;
+    color: #f8fafc !important;
+}
+
+/* Hero v3: SaaS Design */
+.aih-hero {
+    position: relative;
+    padding: 120px 20px;
+    margin: 40px 0;
+    border-radius: 24px;
+    background-color: #f8fafc;
+    background-image: 
+        radial-gradient(var(--aih-grid-color) 1px, transparent 0);
+    background-size: 40px 40px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid var(--aih-grid-color);
+}
+
+[data-md-color-scheme="slate"] .aih-hero {
+    background-color: #0f172a;
+}
+
+.aih-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+[data-md-color-scheme="slate"] .aih-hero-content {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.aih-hero h1 {
+    font-size: 4rem !important;
+    font-weight: 900 !important;
+    margin-bottom: 16px !important;
+    background: var(--aih-primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -2.5px !important;
+}
+
+.aih-hero p {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin-bottom: 32px;
+}
+
+/* Action Buttons */
+.aih-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none !important;
+    margin: 8px;
+}
+
+.aih-btn-primary {
+    background: #4f46e5;
+    color: white !important;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2), 0 2px 4px -2px rgba(79, 70, 229, 0.2);
+}
+
+.aih-btn-primary:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+}
+
+.aih-btn-secondary {
+    background: white;
+    border: 1px solid #e2e8f0;
+    color: #1e293b !important;
+}
+
+.aih-btn-secondary:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+}
+
+/* Feature Cards v2 */
+.aih-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin: 60px 0;
+}
+
+.aih-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+[data-md-color-scheme="slate"] .aih-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: none;
+}
+
+.aih-card:hover {
+    transform: translateY(-8px);
+    border-color: #4f46e5;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.aih-card h3 {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 12px !important;
+    color: #0f172a !important;
+}
+
+[data-md-color-scheme="slate"] .aih-card h3 {
+    color: #f8fafc !important;
+}
+
+.aih-card-icon {
+    width: 48px;
+    height: 48px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+[data-md-color-scheme="slate"] .aih-card-icon {
+    background: #334155;
+}
+
+/* Content Width */
+.md-main__inner {
+    max-width: 1200px !important;
+}
