@@ -1,42 +1,47 @@
-# Nexus ML: Student Success Engine
+<div class="aih-hero">
+    <h1>Nexus ML</h1>
+    <p>A High-Performance Academic Success Prediction Engine. Quantify potential, visualize trajectories, and engineer your future with precision AI.</p>
+    <div class="aih-buttons">
+        <a href="runbook/" class="aih-btn aih-btn-primary">Get Started</a>
+        <a href="https://github.com/monkey9-Cyber-cat-Spidy/Student-Performance-Prediction" class="aih-btn aih-btn-secondary">View on GitHub</a>
+    </div>
+</div>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-</p>
+## Project Capabilities
 
-## Overview
+<div class="aih-grid">
 
-**Nexus ML** is an AI-driven predictive platform designed to identify student academic trajectories. By leveraging the **UCI Student Performance Dataset**, our engine provides students and educators with actionable insights into academic success.
+<div class="aih-card">
+    <span class="aih-card-icon">🧠</span>
+    <h3>Predictive Intelligence</h3>
+    <p>Leverage Random Forest ensembles trained on the UCI Student Dataset to forecast academic performance scores based on multi-dimensional feature sets.</p>
+</div>
 
-!!! tip "Key Objective"
-    Proactively identify at-risk students and recommend data-backed interventions (e.g., increasing study hours or improving attendance) before final exams.
+<div class="aih-card">
+    <span class="aih-card-icon">⚖️</span>
+    <h3>"What-If" Analysis</h3>
+    <p>Instantly calculate the "Score Delta" for hypothetical improvements in attendance, study habits, or scholarship status. Quantify the ROI of effort.</p>
+</div>
 
----
+<div class="aih-card">
+    <span class="aih-card-icon">📊</span>
+    <h3>Glass-Box Metrics</h3>
+    <p>Full transparency into model decision-making. View feature importance rankings and residual benchmarks (R2, MAE, RMSE) in real-time.</p>
+</div>
 
-## Core Features
-
-### 🧠 Predictive Intelligence
-Real-time academic score forecasting using **Random Forest Regressors**. Our model doesn't just guess; it analyzes patterns across scholarship levels, attendance, and study habits.
-
-### ⚖️ "What-If" Analysis Engine
-The dashboard allows users to simulate future states. *What happens to my score if I increase study hours by 5?* The engine recalculates deltas instantly to show the potential ROI of effort.
-
-### 📊 Metric Transparency
-We believe in Glass-Box AI. Our documentation includes full feature importance rankings and model evaluation metrics (R2, MAE, RMSE) derived during the training phase.
-
----
-
-## Quick Navigation
-
-| Section | Description |
-| :--- | :--- |
-| **[Architecture](./architecture.md)** | Deep dive into the technical stack and system flow. |
-| **[Runbook](./runbook.md)** | Detailed setup instructions for local development. |
-| **[Evaluation](./evaluation.md)** | Performance benchmarks and model analysis. |
+</div>
 
 ---
 
-> "Turning academic data into student success trajectories."
+## Technical Stack
+
+The ecosystem is built for speed and mathematical accuracy:
+
+- **Frontend**: High-fidelity dashboard built with **React** and **Vite**.
+- **Inference Layer**: Modern **FastAPI** backend for sub-100ms prediction latency.
+- **ML Pipeline**: **Scikit-Learn** powered training and feature engineering.
+
+---
+
+> [!TIP]
+> **Proactive Intervention**: Use the trajectory engine to identify academic risks at the start of the semester, allowing for early academic intervention.

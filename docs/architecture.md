@@ -1,62 +1,43 @@
 # System Architecture
 
-Nexus ML is built as a de-coupled full-stack application with a specialized machine learning pipeline. This architecture ensures high availability, scalability, and modular maintenance.
+Nexus ML operates as a decoupled academic intelligence portal. The architecture is designed to handle high-dimensional feature vectors with minimal inference overhead.
 
-## Technical Stack
+## Ecosystem Overview
 
-| Layer | Technology | Role |
+| Layer | Component | Description |
 | :--- | :--- | :--- |
-| **Frontend** | React + Vite | Interactive UI, "What-If" Analysis, Real-time Visualizations. |
-| **Backend** | FastAPI (Python) | High-performance REST API, Logic handling, Pydantic validation. |
-| **ML Engine** | Scikit-Learn | Training, Feature Engineering, Inference (Random Forest). |
-| **Infrastructure** | MkDocs Material | Static site generation for technical documentation. |
+| **User Interface** | [React](https://reactjs.org/) | Multi-state dashboard with parallel "What-If" evaluation logic. |
+| **Logic Engine** | [FastAPI](https://fastapi.tiangolo.com/) | RESTful orchestration layer for real-time model interaction. |
+| **Intelligence** | [Scikit-Learn](https://scikit-learn.org/) | Serialization and execution of the Random Forest Regressor. |
 
 ---
 
-## High-Level System Flow
+## Execution Pipeline
 
-The following diagram illustrates how user input travels from the React Dashboard to the ML Model and back as an actionable insight.
+The flowchart below demonstrates the trajectory calculation path from input to insight.
 
 ```mermaid
-graph TD
-    User([Student/User]) -->|Inputs Features| Frontend[React Dashboard]
+graph LR
+    User([User Input]) -- Feature Set --> Frontend[React UI]
+    Frontend -- Parallel Requests --> API[FastAPI Server]
     
-    subgraph "Frontend Engine"
-        Frontend -->|Parallel Simulations| WhatIf[What-If Logic]
-        WhatIf -->|JSON Payload| API[FastAPI Predict Endpoint]
+    subgraph "Core Model Engine"
+        API -- JSON --> Pre[One-Hot Transformer]
+        Pre -- Binary Vector --> RF[Random Forest Model]
+        RF -- Raw Score --> Post[Output Mapper]
+        Post -- Score Delta --> API
     end
     
-    subgraph "Inference Layer"
-        API -->|Preprocessing| Enc[One-Hot Encoder]
-        Enc -->|Input Vector| Model[Random Forest Regressor]
-        Model -->|Raw Prediction| API
-    end
-    
-    API -->|Score & Metrics| Frontend
-    Frontend -->|Visual Insight| User
+    API -- Visualization Data --> Frontend
+    Frontend -- Success Trajectory --> User
 ```
 
 ---
 
-## Architectural Deep Dive
+## Engineering Deep Dive
 
-### 1. The Preprocessing Pipeline
-Unlike simple models, our pipeline performs **dynamic one-hot encoding** at runtime.
-- **Challenge**: Categorical variations (e.g., `Scholarship_100%`) must match the exact binary format used in training.
-- **Solution**: The `api/main.py` script loads `expected_features.json` and maps incoming JSON strings into a high-dimensional vector space using zero-matrix initialization and prefix matching.
+### High-Fidelity Data Transformation
+To ensure model consistency, the system uses a shared `expected_features.json` schema. At runtime, categorical inputs are dynamically expanded into a sparse matrix, ensuring that a "Private" high school input correctly activates the specific weights trained for that variable.
 
-### 2. Multi-Model Winner Selection
-During training, the system evaluates:
-1. **Linear Regression** (Baseline)
-2. **Random Forest Regressor** (Ensemble)
-3. **XGBoost** (Gradient Boosting)
-
-The `train.py` script automatically exports the model with the highest R2 score to `model.pkl`.
-
-### 3. Frontend Parallel Inference
-The React application triggers multiple requests using `Promise.all` to fetch predictions for:
-- Current state (Actual inputs)
-- Improved attendance scenario
-- Increased study hours scenario
-
-This allows the UI to display a "Trajectory Gap" – helping students visualize the impact of behavioral changes.
+### Paradoxical Prediction Logic
+The "What-If" engine performs what we call *Counterfactual Inference*. It keeps the student's base profile frozen while selectively mutating behavioral variables (e.g., Attendance) to observe the score's sensitivity to those specific changes.
