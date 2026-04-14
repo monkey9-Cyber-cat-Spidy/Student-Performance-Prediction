@@ -1,0 +1,45 @@
+{
+    "best_model": "RandomForest",
+    "metrics": {
+        "R2": -0.1789470586086681,
+        "MAE": 10.909051724137926,
+        "RMSE": 14.537872645886251
+    },
+    "all_models": {
+        "LinearRegression": {
+            "R2": -0.016228545225969615,
+            "MAE": 10.505393796683185,
+            "RMSE": 13.497377771909768
+        },
+        "RandomForest": {
+            "R2": -0.1789470586086681,
+            "MAE": 10.909051724137926,
+            "RMSE": 14.537872645886251
+        },
+        "XGBoost": {
+            "R2": -0.787872314453125,
+            "MAE": 13.20257568359375,
+            "RMSE": 17.902841080398385
+        }
+    },
+    "feature_importance": {
+        "Scholarship_75%": 0.1435891017299697,
+        "Weekly_Study_Hours": 0.10392353516585637,
+        "Sex_Male": 0.07772357207011317,
+        "Transportation_Private": 0.06887293330571592,
+        "Project_work_Yes": 0.0682056295472857,
+        "Attendance_Sometimes": 0.06472485712580715,
+        "Sports_activity_Yes": 0.05566345457076436,
+        "Listening_in_Class_Yes": 0.053612637541213586,
+        "Notes_Yes": 0.05348720672237104,
+        "Student_Age_19-22": 0.04881112490437349,
+        "Attendance_Never": 0.04549460636556632,
+        "Additional_Work_Yes": 0.04400675154544171,
+        "High_School_Type_Private": 0.043193878391645395,
+        "Scholarship_50%": 0.038461965947408354,
+        "Reading_Yes": 0.03779835203493489,
+        "High_School_Type_State": 0.03588043007149226,
+        "Student_Age_23-27": 0.00891620896719228,
+        "Scholarship_25%": 0.00763375399284831
+    }
+}

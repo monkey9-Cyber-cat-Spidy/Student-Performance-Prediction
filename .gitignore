@@ -1,0 +1,23 @@
+# Environments
+venv/
+.venv/
+env/
+*.pyc
+__pycache__/
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+package-lock.json
+frontend/package-lock.json
+
+# Documentation
+site/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

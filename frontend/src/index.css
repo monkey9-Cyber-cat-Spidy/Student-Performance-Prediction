@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-white min-h-screen font-sans antialiased;
+    background-image: radial-gradient(circle at top right, #1f2937, #111827);
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl;
+  }
+  
+  .glass-input {
+    @apply bg-black/20 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-white placeholder-gray-400;
+  }
+
+  .stylish-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .stylish-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .stylish-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-white/20;
+  }
+}
+
+/* Custom range slider styling */
+input[type=range] {
+  -webkit-appearance: none;
+  @apply bg-black/40 h-2 rounded-full cursor-pointer border border-white/10;
+  background-image: linear-gradient(to right, #6366f1, #8b5cf6);
+  background-repeat: no-repeat;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  @apply bg-white w-4 h-4 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.8)] border-[3px] border-indigo-500 transition-transform hover:scale-125;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
