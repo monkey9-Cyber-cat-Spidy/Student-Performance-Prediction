@@ -12,13 +12,11 @@
         <meta name="author" content="Nexus ML Team">
       
       
-        <link rel="canonical" href="https://monkey9-cyber-cat-spidy.github.io/Student-Performance-Prediction/runbook/">
+        <link rel="canonical" href="https://monkey9-cyber-cat-spidy.github.io/Student-Performance-Prediction/deployment/">
       
       
-        <link rel="prev" href="../architecture/">
+        <link rel="prev" href="../evaluation/">
       
-      
-        <link rel="next" href="../evaluation/">
       
       
         
@@ -29,7 +27,7 @@
     
     
       
-        <title>Runbook (Setup) - Nexus ML Documentation</title>
+        <title>Deployment - Nexus ML Documentation</title>
       
     
     
@@ -82,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#runbook-setup-guide" class="md-skip">
+        <a href="#deployment-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Runbook (Setup)
+              Deployment
             
           </span>
         </div>
@@ -231,12 +229,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../architecture/" class="md-tabs__link">
           
   
@@ -253,11 +249,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../deployment/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -332,31 +330,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -374,7 +367,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -417,37 +410,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Runbook (Setup)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../runbook/" class="md-nav__link">
         
   
   
@@ -463,109 +429,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-backend-setup-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Backend Setup (FastAPI)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-frontend-setup-react-vite" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Frontend Setup (React + Vite)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-training-data-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Training &amp; Data Generation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cors-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CORS Errors
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#missing-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Missing Model
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -610,26 +473,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -647,7 +515,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -662,10 +530,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../deployment/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -681,6 +576,115 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-backend-deployment-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Backend Deployment (Render)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Backend Deployment (Render)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-requisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-frontend-deployment-vercel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Frontend Deployment (Vercel)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Frontend Deployment (Vercel)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-deployment-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Deployment Topology
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -720,66 +724,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#1-backend-deployment-render" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        1. Backend Deployment (Render)
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-backend-setup-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Backend Setup (FastAPI)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-frontend-setup-react-vite" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Frontend Setup (React + Vite)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-training-data-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Training &amp; Data Generation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
+    <nav class="md-nav" aria-label="1. Backend Deployment (Render)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cors-errors" class="md-nav__link">
+  <a href="#pre-requisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CORS Errors
+        Pre-requisites
       
     </span>
   </a>
@@ -787,10 +747,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#missing-model" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Missing Model
+        Steps
       
     </span>
   </a>
@@ -799,6 +759,56 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-frontend-deployment-vercel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Frontend Deployment (Vercel)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Frontend Deployment (Vercel)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-deployment-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Deployment Topology
+      
+    </span>
+  </a>
   
 </li>
       
@@ -819,79 +829,62 @@
 
 
 
-<h1 id="runbook-setup-guide">Runbook &amp; Setup Guide</h1>
-<p>This guide provides step-by-step instructions to get the Nexus ML environment running locally for development and testing.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Ensure you have the following installed on your system:
-- <strong>Python 3.9+</strong>
-- <strong>Node.js 18+</strong>
-- <strong>npm</strong> (comes with Node.js)
-- <strong>Git</strong></p>
-<hr />
-<h2 id="1-backend-setup-fastapi">1. Backend Setup (FastAPI)</h2>
-<p>The backend handles model inference and data processing.</p>
-<ol>
-<li>
-<p><strong>Create a Virtual Environment</strong>:
-   <div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="n">venv</span>
-<span class="p">.\</span><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">activate</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Install Dependencies</strong>:
-   <div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Train the Initial Model</strong> (Optional, if <code>.pkl</code> is missing):
-   <div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">model</span><span class="p">/</span><span class="n">train</span><span class="p">.</span><span class="n">py</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Launch the API Server</strong>:
-   <div class="highlight"><pre><span></span><code><span class="n">uvicorn</span> <span class="n">api</span><span class="p">.</span><span class="n">main</span><span class="p">:</span><span class="n">app</span> <span class="p">-</span><span class="n">-reload</span> <span class="p">-</span><span class="n">-port</span> <span class="n">8000</span>
-</code></pre></div>
-   <em>The API will be available at <code>http://localhost:8000</code>.</em></p>
-</li>
-</ol>
-<hr />
-<h2 id="2-frontend-setup-react-vite">2. Frontend Setup (React + Vite)</h2>
-<p>The frontend provides the interactive dashboard.</p>
-<ol>
-<li>
-<p><strong>Navigate to the frontend directory</strong>:
-   <div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">frontend</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Install Packages</strong>:
-   <div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">install</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Start the Development Server</strong>:
-   <div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">run</span> <span class="n">dev</span>
-</code></pre></div>
-   <em>The Dashboard will be live at <code>http://localhost:5173</code>.</em></p>
-</li>
-</ol>
-<hr />
-<h2 id="3-training-data-generation">3. Training &amp; Data Generation</h2>
-<p>If you need to generate new synthetic data or re-train the model with fresh data:</p>
+<h1 id="deployment-guide">Deployment Guide</h1>
+<p>Deploying Nexus ML requires setting up the FastAPI backend and the React frontend as independent services that communicate via REST.</p>
+<h2 id="1-backend-deployment-render">1. Backend Deployment (Render)</h2>
+<p>Render is recommended for the FastAPI backend due to its excellent support for Python services and simple environment management.</p>
+<h3 id="pre-requisites">Pre-requisites</h3>
 <ul>
-<li><strong>Generate Data</strong>: Run <code>python model/generate_data.py</code>.</li>
-<li><strong>Re-train Model</strong>: Run <code>python model/train.py</code>.</li>
+<li>A GitHub repository containing the project.</li>
+<li>A <code>requirements.txt</code> file in the root (already provided).</li>
 </ul>
-<div class="admonition check">
-<p class="admonition-title">Verification</p>
-<p>After starting both servers, navigate to <code>http://localhost:8000/health</code>. If you see <code>{"status":"OK"}</code>, the backend is healthy and ready to receive requests from the React dashboard.</p>
-</div>
+<h3 id="steps">Steps</h3>
+<ol>
+<li>Create a <strong>New Service</strong> -&gt; <strong>Web Service</strong> on Render.</li>
+<li>Connect your GitHub repository.</li>
+<li>Configure settings:<ul>
+<li><strong>Language</strong>: <code>Python 3</code></li>
+<li><strong>Build Command</strong>: <code>pip install -r requirements.txt</code></li>
+<li><strong>Start Command</strong>: <code>uvicorn api.main:app --host 0.0.0.0 --port $PORT</code></li>
+</ul>
+</li>
+<li>Add <strong>Environment Variables</strong>:<ul>
+<li><code>PYTHON_VERSION</code>: <code>3.10.x</code> (or higher)</li>
+</ul>
+</li>
+</ol>
 <hr />
-<h2 id="troubleshooting">Troubleshooting</h2>
-<h3 id="cors-errors">CORS Errors</h3>
-<p>If the frontend cannot talk to the backend, ensure the <code>allow_origins</code> in <code>api/main.py</code> includes your local frontend URL or is set to <code>["*"]</code> for development.</p>
-<h3 id="missing-model">Missing Model</h3>
-<p>If you get a 404 or 500 error on the <code>/predict</code> endpoint, ensure <code>model/model.pkl</code> and <code>model/expected_features.json</code> exist. Run the training script to generate them.</p>
+<h2 id="2-frontend-deployment-vercel">2. Frontend Deployment (Vercel)</h2>
+<p>Vercel is the gold standard for React deployment, offering rapid builds and edge delivery.</p>
+<h3 id="configuration">Configuration</h3>
+<p>Update your <code>frontend/.env</code> (or set in Vercel UI) to point to your Render backend:
+<div class="highlight"><pre><span></span><code>VITE_API_BASE_URL=https://your-backend-app.onrender.com
+</code></pre></div></p>
+<h3 id="steps_1">Steps</h3>
+<ol>
+<li>Create a <strong>New Project</strong> on Vercel.</li>
+<li>Select your repository.</li>
+<li>Configure the <strong>Build Settings</strong>:<ul>
+<li><strong>Framework Preset</strong>: <code>Vite</code></li>
+<li><strong>Root Directory</strong>: <code>frontend</code></li>
+<li><strong>Build Command</strong>: <code>npm run build</code></li>
+<li><strong>Output Directory</strong>: <code>dist</code></li>
+</ul>
+</li>
+<li>Register the <code>VITE_API_BASE_URL</code> environment variable in the Vercel dashboard.</li>
+</ol>
+<hr />
+<h2 id="3-deployment-topology">3. Deployment Topology</h2>
+<p>Nexus ML is optimized for <strong>Global Orchestration</strong>:</p>
+<ul>
+<li><strong>Frontend</strong>: Serves static assets from Edge locations via Vercel.</li>
+<li><strong>Backend</strong>: Processes high-dimensional inference on Render's containerized Python environment.</li>
+<li><strong>Communication</strong>: Secure HTTPS requests between Vercel and Render, managed via CORS (Cross-Origin Resource Sharing).</li>
+</ul>
+<blockquote>
+<p>[!CAUTION]
+<strong>CORS Security</strong>: In the current <code>api/main.py</code>, CORS is set to <code>allow_origins=["*"]</code>. For production, update this to specifically allow only your Vercel deployment URL (e.g., <code>https://nexus-ml.vercel.app</code>).</p>
+</blockquote>
 
 
 

@@ -1,10 +1,11 @@
 :root {
-    --aih-primary-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+    --aih-primary-gradient: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
     --aih-grid-color: rgba(0, 0, 0, 0.05);
+    --aih-accent: #6366f1;
 }
 
 [data-md-color-scheme="slate"] {
-    --aih-grid-color: rgba(255, 255, 255, 0.05);
+    --aih-grid-color: rgba(255, 255, 255, 0.03);
 }
 
 /* Professional Sidebar */
@@ -31,16 +32,16 @@
     color: #f8fafc !important;
 }
 
-/* Hero v3: SaaS Design */
+/* Hero v4: Centered & Impactful */
 .aih-hero {
     position: relative;
-    padding: 120px 20px;
-    margin: 40px 0;
-    border-radius: 24px;
-    background-color: #f8fafc;
+    padding: 100px 20px 60px 20px;
+    margin: 20px 0 60px 0;
+    border-radius: 32px;
+    background-color: #ffffff;
     background-image: 
-        radial-gradient(var(--aih-grid-color) 1px, transparent 0);
-    background-size: 40px 40px;
+        radial-gradient(var(--aih-grid-color) 1.5px, transparent 0);
+    background-size: 48px 48px;
     overflow: hidden;
     text-align: center;
     border: 1px solid var(--aih-grid-color);
@@ -53,35 +54,50 @@
 .aih-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-}
-
-[data-md-color-scheme="slate"] .aih-hero-content {
-    background: rgba(30, 41, 59, 0.6);
-    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .aih-hero h1 {
-    font-size: 4rem !important;
+    font-size: 5rem !important;
     font-weight: 900 !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 24px !important;
     background: var(--aih-primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    letter-spacing: -2.5px !important;
+    letter-spacing: -3.5px !important;
+    line-height: 1 !important;
 }
 
 .aih-hero p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: #64748b;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Showcase Image */
+.aih-showcase {
+    max-width: 1000px;
+    margin: -40px auto 80px auto;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    border: 8px solid rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 5;
+    transition: transform 0.5s ease;
+}
+
+.aih-showcase:hover {
+    transform: scale(1.02);
+}
+
+[data-md-color-scheme="slate"] .aih-showcase {
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    border-color: rgba(30, 41, 59, 0.8);
 }
 
 /* Action Buttons */
