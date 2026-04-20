@@ -143,7 +143,8 @@ export default function Dashboard() {
         }
 
       } catch (err) {
-        setError("Unable to connect to ML prediction server.");
+        setError("ML Prediction engine is warming up or offline.");
+        console.error("Prediction fetch failed:", err);
       }
     }, 400); 
     return () => clearTimeout(timer);
@@ -214,15 +215,17 @@ export default function Dashboard() {
         </div>
         <div className="mt-4 md:mt-0 flex gap-4 items-center">
           <Link to="/" className="text-gray-400 hover:text-white text-sm font-medium mr-4 transition-colors">← Back to Home</Link>
-          {metrics && (
+          {metrics ? (
             <div className="flex gap-4 text-xs font-mono text-gray-300">
               <span className="bg-indigo-500/10 px-3 py-1.5 rounded-full border border-indigo-500/20">
-                R² {parseFloat(metrics.metrics.R2).toFixed(3)}
+                R² {metrics.metrics?.R2 ? parseFloat(metrics.metrics.R2).toFixed(3) : "N/A"}
               </span>
               <span className="bg-purple-500/10 px-3 py-1.5 rounded-full border border-purple-500/20">
-                {metrics.best_model} Engine
+                {metrics.best_model || "Genetic"} Engine
               </span>
             </div>
+          ) : (
+            <div className="text-xs text-gray-500 italic">Synchronizing with ML Engine...</div>
           )}
         </div>
       </header>

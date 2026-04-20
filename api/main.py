@@ -17,10 +17,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load Model paths
-MODEL_PATH = "../model/model.pkl"
-METRICS_PATH = "../model/model_metrics.json"
-EXPECTED_FEATURES_PATH = "../model/expected_features.json"
+# Base directory for absolute paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Load Model paths using absolute paths for reliability in production
+MODEL_PATH = os.path.join(BASE_DIR, "model", "model.pkl")
+METRICS_PATH = os.path.join(BASE_DIR, "model", "model_metrics.json")
+EXPECTED_FEATURES_PATH = os.path.join(BASE_DIR, "model", "expected_features.json")
 
 class StudentMetrics(BaseModel):
     Student_Age: str
@@ -36,6 +39,15 @@ class StudentMetrics(BaseModel):
     Notes: str
     Listening_in_Class: str
     Project_work: str
+
+@app.get("/")
+def read_root():
+    return {
+        "message": "Welcome to Nexus ML API",
+        "status": "online",
+        "docs": "/docs",
+        "health": "/health"
+    }
 
 @app.get("/health")
 def health_check():
