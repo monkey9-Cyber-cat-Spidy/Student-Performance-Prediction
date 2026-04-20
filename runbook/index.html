@@ -536,6 +536,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#connection-refused-err_connection_refused" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Refused (ERR_CONNECTION_REFUSED)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variable-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variable System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cors-errors" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -776,6 +798,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#connection-refused-err_connection_refused" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Refused (ERR_CONNECTION_REFUSED)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variable-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variable System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cors-errors" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -888,6 +932,16 @@
 </div>
 <hr />
 <h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="connection-refused-err_connection_refused">Connection Refused (ERR_CONNECTION_REFUSED)</h3>
+<p>If you see this error in your browser console:
+1. <strong>Check Backend Status</strong>: Ensure the FastAPI server is running (<code>uvicorn api.main:app</code>).
+2. <strong>Environment Variables</strong>: Check that <code>frontend/.env.development</code> points to the correct local port (default: 8000).
+3. <strong>Network</strong>: Ensure no firewall is blocking local traffic on port 8000.</p>
+<h3 id="environment-variable-system">Environment Variable System</h3>
+<p>We use a dynamic URL system for the frontend. If you need to change your backend endpoint:
+- <strong>Local Development</strong>: Edit <code>frontend/.env.development</code>.
+- <strong>Production</strong>: Edit <code>frontend/.env.production</code>.
+- <strong>Apply Changes</strong>: You must RESTART the Vite dev server (<code>npm run dev</code>) or re-build the app for changes to take effect.</p>
 <h3 id="cors-errors">CORS Errors</h3>
 <p>If the frontend cannot talk to the backend, ensure the <code>allow_origins</code> in <code>api/main.py</code> includes your local frontend URL or is set to <code>["*"]</code> for development.</p>
 <h3 id="missing-model">Missing Model</h3>
