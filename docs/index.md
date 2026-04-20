@@ -10,7 +10,7 @@
 </div>
 
 <div class="aih-showcase">
-    ![Nexus ML Dashboard Showcase](assets/dashboard_mockup.png)
+    <img src="assets/dashboard_mockup.png" alt="Nexus ML Dashboard Showcase">
 </div>
 
 ## Intelligence Capabilities
