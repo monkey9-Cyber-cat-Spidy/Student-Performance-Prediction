@@ -9,7 +9,11 @@
     </div>
 </div>
 
-## Performance Capabilities
+<div class="aih-showcase">
+    ![Nexus ML Dashboard Showcase](assets/dashboard_mockup.png)
+</div>
+
+## Intelligence Capabilities
 
 <div class="aih-grid">
 
@@ -21,13 +25,13 @@
 
 <div class="aih-card">
     <div class="aih-card-icon">⚡</div>
-    <h3>Counterfactual Analysis</h3>
+    <h3>Counterfactual Logic</h3>
     <p>Mathematically simulate behavioral changes. Quantify how specific lifestyle adjustments impact academic success trajectories.</p>
 </div>
 
 <div class="aih-card">
     <div class="aih-card-icon">🔓</div>
-    <h3>Glass-Box Transparency</h3>
+    <h3>Glass-Box Metrics</h3>
     <p>No hidden variables. Access full feature importance rankings and residual benchmarks directly through the dashboard.</p>
 </div>
 
