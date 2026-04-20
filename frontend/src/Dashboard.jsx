@@ -85,8 +85,17 @@ export default function Dashboard() {
   const [error, setError] = useState(null);
   const [aiInsight, setAiInsight] = useState("Analyzing massive feature matrix for optimal strategy...");
 
+  const getApiUrl = (endpoint) => {
+    let base = import.meta.env.VITE_API_BASE_URL || '';
+    base = base.replace(/\/+$/, '');
+    if (base.includes('onrender.com') && !base.startsWith('http')) {
+      base = `https://${base}`;
+    }
+    return `${base}${endpoint}`;
+  };
+
   const fetchPrediction = async (data) => {
-    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/predict`, {
+    const res = await fetch(getApiUrl('/predict'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
@@ -97,7 +106,7 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_BASE_URL}/model-info`)
+    fetch(getApiUrl('/model-info'))
       .then(res => res.json())
       .then(data => setMetrics(data))
       .catch(err => console.error("Failed to fetch model info:", err));
