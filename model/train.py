@@ -9,6 +9,13 @@ import joblib
 import json
 import os
 
+# Base directory for absolute paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(BASE_DIR, "model", "real_student_data.csv")
+MODEL_EXPORT_PATH = os.path.join(BASE_DIR, "model", "model.pkl")
+METRICS_EXPORT_PATH = os.path.join(BASE_DIR, "model", "model_metrics.json")
+FEATURES_EXPORT_PATH = os.path.join(BASE_DIR, "model", "expected_features.json")
+
 def evaluate_model(y_true, y_pred):
     return {
         "R2": float(r2_score(y_true, y_pred)),
@@ -17,12 +24,11 @@ def evaluate_model(y_true, y_pred):
     }
 
 def train_and_export():
-    data_path = "model/real_student_data.csv"
-    if not os.path.exists(data_path):
-        print(f"Data not found at {data_path}. Please provide correct dataset.")
-        return
+    if not os.path.exists(DATA_PATH):
+        print(f"Data not found at {DATA_PATH}. Please provide correct dataset.")
+        return False
         
-    df = pd.read_csv(data_path)
+    df = pd.read_csv(DATA_PATH)
     
     # 1. Clean Data & Map Grades
     grade_map = {
@@ -51,7 +57,7 @@ def train_and_export():
     
     # Export Expected feature columns for API
     expected_cols = X.columns.tolist()
-    with open("model/expected_features.json", "w") as f:
+    with open(FEATURES_EXPORT_PATH, "w") as f:
         json.dump(expected_cols, f)
     print(f"Exported {len(expected_cols)} encoded feature names.")
 
@@ -96,9 +102,8 @@ def train_and_export():
     feature_importance = dict(sorted(feature_importance.items(), key=lambda item: item[1], reverse=True))
 
     # Export Model
-    model_path = "model/model.pkl"
-    joblib.dump(best_model, model_path)
-    print(f"Model saved to {model_path}")
+    joblib.dump(best_model, MODEL_EXPORT_PATH)
+    print(f"Model saved to {MODEL_EXPORT_PATH}")
     
     # Export Metrics
     metrics_data = {
@@ -108,9 +113,10 @@ def train_and_export():
         "feature_importance": feature_importance
     }
     
-    with open("model/model_metrics.json", "w") as f:
+    with open(METRICS_EXPORT_PATH, "w") as f:
         json.dump(metrics_data, f, indent=4)
-    print("Metrics saved to model/model_metrics.json")
+    print(f"Metrics saved to {METRICS_EXPORT_PATH}")
+    return True
 
 if __name__ == "__main__":
     train_and_export()

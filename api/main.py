@@ -5,6 +5,14 @@ import joblib
 import json
 import os
 import pandas as pd
+import sys
+
+# Base directory for absolute paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(BASE_DIR)
+
+# Import training logic from the model folder
+from model.train import train_and_export
 
 app = FastAPI(title="Student Performance Prediction API")
 
@@ -52,6 +60,23 @@ def read_root():
 @app.get("/health")
 def health_check():
     return {"status": "OK"}
+
+@app.post("/train-logic")
+def trigger_training():
+    success = train_and_export()
+    if success:
+        return {"status": "success", "message": "Model re-trained successfully on Render."}
+    else:
+        return {"status": "error", "message": "Training failed. Check data path."}
+
+# Auto-Bootstrap: Train model on first launch if missing
+@app.on_event("startup")
+def startup_event():
+    if not os.path.exists(MODEL_PATH) or not os.path.exists(METRICS_PATH):
+        print("Model or metrics not found on server. Initializing automatic training...")
+        train_and_export()
+    else:
+        print("Model and metrics verified. Nexus ML Engine standby.")
 
 @app.get("/model-info")
 def get_model_info():
