@@ -86,7 +86,7 @@ export default function Dashboard() {
   const [aiInsight, setAiInsight] = useState("Analyzing massive feature matrix for optimal strategy...");
 
   const fetchPrediction = async (data) => {
-    const res = await fetch('http://localhost:8000/predict', {
+    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/predict`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
@@ -97,7 +97,7 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
-    fetch('http://localhost:8000/model-info')
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/model-info`)
       .then(res => res.json())
       .then(data => setMetrics(data))
       .catch(err => console.error("Failed to fetch model info:", err));

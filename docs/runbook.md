@@ -76,6 +76,18 @@ If you need to generate new synthetic data or re-train the model with fresh data
 
 ## Troubleshooting
 
+### Connection Refused (ERR_CONNECTION_REFUSED)
+If you see this error in your browser console:
+1. **Check Backend Status**: Ensure the FastAPI server is running (`uvicorn api.main:app`).
+2. **Environment Variables**: Check that `frontend/.env.development` points to the correct local port (default: 8000).
+3. **Network**: Ensure no firewall is blocking local traffic on port 8000.
+
+### Environment Variable System
+We use a dynamic URL system for the frontend. If you need to change your backend endpoint:
+- **Local Development**: Edit `frontend/.env.development`.
+- **Production**: Edit `frontend/.env.production`.
+- **Apply Changes**: You must RESTART the Vite dev server (`npm run dev`) or re-build the app for changes to take effect.
+
 ### CORS Errors
 If the frontend cannot talk to the backend, ensure the `allow_origins` in `api/main.py` includes your local frontend URL or is set to `["*"]` for development.
 
